@@ -11,9 +11,10 @@
       ><img class="logo-image" src="../../../assets/images/logo.png"
     /></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <mat-list-item *ngFor="let i of menuItems" [routerLink]="i.url">
+        <mat-icon>{{ i.icon }}</mat-icon>
+        <span matLine>{{ i.title }}</span>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -29,6 +30,6 @@
       </button>
       <span>Movie Buzz</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <section><router-outlet></router-outlet></section>
   </mat-sidenav-content>
 </mat-sidenav-container>

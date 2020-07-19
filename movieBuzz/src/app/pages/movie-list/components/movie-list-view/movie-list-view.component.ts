@@ -6,7 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { MOVIES_LIST } from '../../../../shared/utils/movies';
 import { MovieList } from '../../dto/movie-list';
-import {MovieListService} from '../../services/movie-list.service';
+import { MovieListService } from '../../services/movie-list.service';
 @Component({
   selector: 'app-movie-list-view',
   templateUrl: './movie-list-view.component.html',
@@ -72,6 +72,6 @@ export class MovieListViewComponent implements OnInit {
   } // applyFilter()
 
   addNewMovie() {
-    this.router.navigate(['/movie-list/add-new']);
+    this.router.navigate(['/movie-list/add-edit']);
   } // addNewMovie()
 } // class

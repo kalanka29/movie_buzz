@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MovieListAddNewComponent } from './components/movie-list-add-new/movie-list-add-new.component';
+import { MovieListAddEditComponent } from './components/movie-list-add-edit/movie-list-add-edit.component';
 import { MovieListViewComponent } from './components/movie-list-view/movie-list-view.component';
 
 const routes: Routes = [
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: MovieListViewComponent,
   },
   {
-    path: 'add-new',
-    component: MovieListAddNewComponent,
+    path: 'add-edit',
+    component: MovieListAddEditComponent,
   },
 ];
 

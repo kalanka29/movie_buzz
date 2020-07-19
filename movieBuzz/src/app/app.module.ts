@@ -1,4 +1,5 @@
 import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,7 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './pages/main-nav/main-nav.component';
 
-
 @NgModule({
   declarations: [AppComponent, MainNavComponent],
   imports: [
@@ -19,6 +19,8 @@ import { MainNavComponent } from './pages/main-nav/main-nav.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    HttpClientModule,
+    // Material
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
