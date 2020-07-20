@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'add-edit',
-    component: MovieListAddEditComponent
+    component: MovieListAddEditComponent,
   },
 ];
 
