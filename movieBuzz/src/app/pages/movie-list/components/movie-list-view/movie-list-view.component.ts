@@ -23,8 +23,6 @@ export class MovieListViewComponent implements OnInit {
     'edit',
     'delete',
   ];
-  // dataSource = new MatTableDataSource<MovieList>(this.movieList);
-
   dataSource = new MatTableDataSource<MovieList>(MOVIES_LIST);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -47,19 +45,15 @@ export class MovieListViewComponent implements OnInit {
         console.log(err);
       }
     );
-    // this.movieList = require('../../shared/utils/movie-list.json');
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
 
   deleteMovie(movie: MovieList) {
-    console.log('delete' + movie);
-    alert(movie.title);
   } //deleteMovie()
 
   editMovie(movie: MovieList) {
-    console.log('Edit' + movie);
-    alert(movie.title);
+    this.router.navigate(['/movie-list/add-edit'], { queryParams: movie });
   } // editMovie()
 
   applyFilter(event: Event) {
